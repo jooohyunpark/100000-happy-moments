@@ -7,11 +7,14 @@
     <link rel="stylesheet/less" type="text/css" href="style.less" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.5.0/less.min.js"></script>
     <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.js'></script>
+<script src='https://d3js.org/d3.v5.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.js'></script>   
+  
 </head>
 
 <body>
+
 <p id="title">100,000 &nbsp;HAPPY &nbsp;MOMENTS</p>
 
 <div id="info-wrapper" >
@@ -19,13 +22,43 @@
 </div>
 
 <div id="infoContent">
-  This is my DIV element.
+<div class="content">
+  <p>
+  This is my DIV element. <br>
+     This is my DIV element. <br>
+       This is my DIV element. <br>
+         This is my DIV element. 
+         <br><br><br><br>
+    </p>
+    
+    <p>
+     Development&nbsp; Joohyun Park &emsp;|&emsp; UX Design&nbsp; Donghee An
+         <br><br><br><br>
+    </p>
+       
+        <p id="reference" >Dataset from <br></p>
+            <p id="reference-title">
+                <a href="https://rit-public.github.io/HappyDB/" target="_blank">HappyDB: A Corpus of 100,000 Crowdsourced Happy Moments</a> </p>
+                <p id="reference">
+  Asai, Akari and Evensen, Sara and Golshan, Behzad and Halevy, Alon and Li, Vivian and Lopatenko, <br> Andrei and Stepanov, Daniela and Suhara, Yoshihiko and Tan, Wang-Chiew and Xu, Yinzhan
+ </p>
+</div>
 </div>
 
-<div class="text-wrapper" >
-<p id="text"></p>
+
+<div class="keys">
+<div class="key-element" id="m"><div id="color1"></div><div>Achievement</div></div>    
+<div class="key-element" id="m"><div id="color2"></div><div>Affection</div></div>       
+<div class="key-element" id="m"><div id="color3"></div><div>Enjoy the Moment</div></div> 
+<div class="key-element" id="m"><div id="color4"></div><div>Bonding</div></div> 
+<div class="key-element" id="m"><div id="color5"></div><div>Leisure</div></div> 
+<div class="key-element" id="m"><div id="color6"></div><div>Nature</div></div>     
+<div class="key-element"><div id="color7"></div><div>Exercise</div></div>     
 </div>
 
-<script src="data.js"></script>
+<div id="container"></div>
+
+
+<script src="index.js"></script>
 </body>
 </html>
