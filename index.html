@@ -10,6 +10,8 @@
    <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.js'></script>
 <script src='https://d3js.org/d3.v5.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.js'></script>   
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   
 </head>
 
@@ -23,11 +25,9 @@
 
 <div id="infoContent">
 <div class="content">
-  <p>
-  This is my DIV element. <br>
-     This is my DIV element. <br>
-       This is my DIV element. <br>
-         This is my DIV element. 
+  <p id="text">
+  This project creates a visualization of 100,000 positive moments by categorizing multiple users’ datasets. Each of these moments, represented by a dot, is categorized based on the emotional context of the moment; achievement, affection, enjoyment, bonding, leisure, nature, and exercise. 
+Users can see all these uplifting moments being shared from other users so that they realize overall happiness and well-being comes from the impact of small activities performed over time.
          <br><br><br><br>
     </p>
     
@@ -39,11 +39,16 @@
         <p id="reference" >Dataset from <br></p>
             <p id="reference-title">
                 <a href="https://rit-public.github.io/HappyDB/" target="_blank">HappyDB: A Corpus of 100,000 Crowdsourced Happy Moments</a> </p>
-                <p id="reference">
+                <p id="reference-text">
   Asai, Akari and Evensen, Sara and Golshan, Behzad and Halevy, Alon and Li, Vivian and Lopatenko, <br> Andrei and Stepanov, Daniela and Suhara, Yoshihiko and Tan, Wang-Chiew and Xu, Yinzhan
  </p>
 </div>
 </div>
+
+<div id="scroll"><p id="arrow">⌃</p>scroll to zoom</div>
+<script>
+    $("#scroll").delay(10000).animate({bottom: "-8%"});
+    </script>
 
 
 <div class="keys">

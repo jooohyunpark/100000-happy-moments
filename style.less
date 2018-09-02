@@ -17,11 +17,6 @@ html {
     cursor: default;
 }
 
-//#container{
-//       opacity : 0;
-//    .starter2();
-//}
-
 
 #title {
     position : absolute;
@@ -33,7 +28,6 @@ html {
     z-index: 9999;
     .starter();
 }
-
 
 
 #info {
@@ -68,8 +62,6 @@ html {
 }
 
 
-
-
 #infoContent {
     position: absolute;
     font-size: 16px;
@@ -84,7 +76,7 @@ html {
 #infoContent .content {
         line-height: 1.6em;
     position : absolute;
-     top: @centerVal;
+     top: 56%;
     left: @centerVal;
     transform: translate(-@centerVal, -@centerVal);
     -webkit-transform: translate(-@centerVal, -@centerVal);
@@ -101,9 +93,12 @@ html {
 
 
 #reference {
-    font-size : 12px;  
+    font-size : 16px;  
 }
 
+#reference-text {
+    font-size : 12px;  
+}
 
 
 .keys{
@@ -170,11 +165,25 @@ html {
     width : @circle-size;
     height :  @circle-size;
     border-radius: 50%;
-     vertical-align: middle;
+    vertical-align: middle;
     margin-right: 8px;
 }
 
+#scroll{
+    position : absolute;
+    width : 100%;
+    bottom : 3%;
+    text-align: center;
+    font-size: 14px;
+    opacity: 0;
+    z-index: 1111;
+       .starter();
+}
 
+#arrow {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
 
 /////////////////////////////////////////////////////////////////
 .starter() {
@@ -190,23 +199,6 @@ html {
     );
     .animation(fade-in @animationTime ease-in-out 0s forwards);
 }
-
-
-//.starter2() {
-//    .keyframes(fade-in;
-//        {
-//        0% {
-//            opacity: 0;
-//        }
-//        100% {
-//            opacity: 1;
-//        }
-//    }
-//    );
-//    .animation2(fade-in @containerAnimationTime ease-in-out 0s forwards);
-//}
-
-
 
 
 .keyframes(@name;
@@ -229,38 +221,6 @@ html {
     animation-delay: @animationTime;
 }
 
-//.animation2(@arguments) {
-//    -webkit-animation: @arguments;
-//    -moz-animation: @arguments;
-//    animation: @arguments;
-//    animation-delay: @containerAnimationTime;
-//}
-
-
-
-
 
 
 ////////////////////////////////////////////////////////////////////
-//#text {
-//    position: absolute;
-//    text-align: center;
-//    width: 80%;
-//    opacity: 0;
-//    font-weight: 700;
-////    background-color : white;
-//        margin-right: @result-padding;
-//    margin-left: @result-padding;
-//    top: @centerVal;
-//    left: @centerVal;
-//    transform: translate(-@centerVal, -@centerVal);
-//    -webkit-transform: translate(-@centerVal, -@centerVal);
-//
-//    .starter();
-//}
-
-//.text-wrapper {
-//    &:hover {
-//        cursor: pointer;
-//    }
-//}

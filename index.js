@@ -41,10 +41,11 @@ let width = window.innerWidth;
 let viz_width = width;
 let height = window.innerHeight;
 
-let fov = 40;
+let fov = 80;
 let near = 10;
-let far = 8000;
+let far = 4000;
 
+        
 // Set up camera and scene
 let camera = new THREE.PerspectiveCamera(
   fov,
@@ -62,6 +63,8 @@ window.addEventListener('resize', () => {
   camera.aspect = width / height;
   camera.updateProjectionMatrix();
 })
+    
+
 
     /*
     0 - achivement 
@@ -73,15 +76,6 @@ window.addEventListener('resize', () => {
     6 - exercise    
     */   
 let color_array = [
-
-//  "#7eb2e0",
-//  "#ed8bf5",
-//  "#68eb89",
-//  "#9c9cff",
-//  "#10ccdd", /*"#00bbe3" */
-//  "#ff9c9c",
-//  "#ffcf40"       
-    
  "#1f78b4",
   "#33a02c",
   "#765744",
@@ -89,15 +83,6 @@ let color_array = [
   "#5200ff",
   "#ff9c9c",
   "#F7CF24"    
-
-// "#1f78b4",
-//  "#33a02c",
-//  "#91939E",
-//  "#765744",
-//  "#5200ff",
-//  "#6F0D4A",
-//  "#F7CF24"
-    
 ]
 
 // Add canvas
@@ -105,7 +90,7 @@ let renderer = new THREE.WebGLRenderer();
 renderer.setSize(width, height);
     let container = document.getElementById('container');
     container.appendChild(renderer.domElement);
-document.body.appendChild(container);
+    document.body.appendChild(container);
 
 let zoom = d3.zoom()
   .scaleExtent([getScaleFromZ(far), getScaleFromZ(near)])
@@ -389,4 +374,4 @@ function trigger() {
     }
 }
 
-    
+
