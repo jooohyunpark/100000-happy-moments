@@ -7,4 +7,4 @@ A simple visualization of 100,000 datasets collected from people over the world.
 * Three.js for creating scene and visualizing datapoints. 
 * Other elements and UI are made with native javascript. 
 
-[Live project](http://100000.parkjoohyun.com/)
+[View Project](http://100000.parkjoohyun.com/)
