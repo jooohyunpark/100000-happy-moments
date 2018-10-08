@@ -76,13 +76,21 @@ window.addEventListener('resize', () => {
     6 - exercise    
     */   
 let color_array = [
- "#1f78b4",
-  "#33a02c",
-  "#765744",
-  "#00bbe3",
-  "#5200ff",
-  "#ff9c9c",
-  "#F7CF24"    
+//  "#7c40ff",
+//  "#00b4eb",
+//  "#ef52d1",    
+//  "#f57921",    
+//  "#2de1a6",
+//  "#fec300",
+//  "#008f11" 
+    
+  "#7c40ff",
+  "#00b4eb",
+  "#ef52d1",    
+  "#f57921",    
+  "#2de1a6",
+  "#fec300",
+  "#008f11"   
 ]
 
 // Add canvas
@@ -139,7 +147,7 @@ for (var i = 0; i < data.length; i++) {
     if(group == "bonding") {colorValue = 3 } 
     if(group == "leisure") {colorValue = 4} 
     if(group == "nature") {colorValue = 5    } 
-    if(group == "exercise") {colorValue = 6}     
+    if(group == "exercise") {colorValue = 6}   
     
   let point = { position, name, group, colorValue };
   data_points.push(point);
@@ -160,7 +168,7 @@ for (let datum of generated_points) {
 pointsGeometry.colors = colors;
 
 let pointsMaterial = new THREE.PointsMaterial({
-  size: 8,
+  size: 4,
   sizeAttenuation: false,
   vertexColors: THREE.VertexColors,
   map: circle_sprite,
