@@ -1,4 +1,4 @@
-# 100000-happy-moments-visualization
+# 100000-happy-moments
 
 A simple visualization of 100,000 datasets collected from people over the world. Dataset collected from [HappyDB](https://github.com/rit-public/HappyDB).
 
