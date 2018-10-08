@@ -9,4 +9,4 @@ A simple visualization of 100,000 datasets collected from people over the world.
 * Three.js for creating scene and visualizing datapoints. 
 * Other elements and UI are made with native javascript. 
 
-[View Project](https://byjoohyunpark.github.io/100000-happy-moments-v/)
+[View Project](https://byjoohyunpark.github.io/100000-happy-moments/)
