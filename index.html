@@ -13,7 +13,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 
-<body>
+<body onscroll="fade()">
 
     <p id="title">100,000 &nbsp;HAPPY &nbsp;MOMENTS</p>
 
@@ -44,12 +44,6 @@
     <div id="scroll">
         <p id="arrow">⌃</p>scroll to zoom
     </div>
-    <script>
-        $("#scroll").delay(20000).animate({
-            bottom: "-8%"
-        });
-    </script>
-
 
     <div class="keys">
         <div class="key-element" id="m">
@@ -84,7 +78,16 @@
 
     <div id="container"></div>
 
-
     <script src="index.js"></script>
+
+
+    <script>
+        $("#scroll").delay(8000).animate({
+            bottom: "-8%"
+        }, () => {
+            $("#scroll").hide()
+        });
+    </script>
+
 </body>
 </html>

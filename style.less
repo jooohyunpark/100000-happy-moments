@@ -13,18 +13,17 @@ html {
     font-size: @font-size;
     overflow: hidden;
     font-weight: 400;
-    margin : 0 ;
+    margin: 0;
     cursor: default;
 }
 
-
 #title {
-    position : absolute;
-    width : 100%;
+    position: absolute;
+    width: 100%;
     text-align: center;
-      font-size: 14px;
+    font-size: 14px;
     margin-bottom: 40px;
-            opacity : 0;
+    opacity: 0;
     z-index: 9999;
     .starter();
 }
@@ -37,17 +36,18 @@ html {
     position: absolute;
     border-style: solid;
     border-width: 2px;
-    background-color : transparent;
+    background-color: transparent;
     right: 3%;
     opacity: 0;
     top: 9%;
-        z-index: 9999;
+    z-index: 9999;
 
     .starter();
 
     transition: transform .2s;
+
     &:hover {
-    border-color: #5200ff;
+        border-color: #5200ff;
     }
 
 }
@@ -74,112 +74,114 @@ html {
 }
 
 #infoContent .content {
-        line-height: 1.6em;
-    position : absolute;
-     top: 56%;
+    line-height: 1.6em;
+    position: absolute;
+    top: 56%;
     left: @centerVal;
     transform: translate(-@centerVal, -@centerVal);
     -webkit-transform: translate(-@centerVal, -@centerVal);
 }
 
 #reference-title {
-    font-size : 12px;
-    font-weight : 600;
+    font-size: 12px;
+    font-weight: 600;
 }
-#reference-title a{
-    color : black ; 
+
+#reference-title a {
+    color: black;
     text-decoration: none;
 }
 
 
 #reference {
-    font-size : 16px;  
+    font-size: 16px;
 }
 
 #reference-text {
-    font-size : 12px;  
+    font-size: 12px;
 }
 
 
-.keys{
+.keys {
     font-size: @key-size;
-    position :absolute;
-    bottom : 3%;
-    right : 3%;
-    background-color : white;
-    padding : 16px;
-    border : 0.2px solid ;
-    opacity : 0;
+    position: absolute;
+    bottom: 3%;
+    right: 3%;
+    background-color: white;
+    padding: 16px;
+    border: 0.2px solid;
+    opacity: 0;
     .starter();
 }
 
-.key-element{
-    display : flex;
+.key-element {
+    display: flex;
     line-height: 16px;
-    background-color : white;
+    background-color: white;
 }
 
- #m{
-  margin-bottom: 6px;
+#m {
+    margin-bottom: 6px;
 }
- 
 
-     
+
+
 
 ///// category color //////
-#color1{
-    background-color : #7c40ff;
+#color1 {
+    background-color: #7c40ff;
     .space();
 }
 
-#color2{
-    background-color :   #00b4eb;
+#color2 {
+    background-color: #00b4eb;
     .space();
 }
 
-#color3{
-    background-color :  #ef52d1;
+#color3 {
+    background-color: #ef52d1;
     .space();
 }
 
-#color4{
-    background-color : #f57921;
+#color4 {
+    background-color: #f57921;
     .space();
 }
 
-#color5{
-    background-color : #2de1a6;
+#color5 {
+    background-color: #2de1a6;
     .space();
 }
 
-#color6{
-    background-color : #fec300;
+#color6 {
+    background-color: #fec300;
     .space();
 }
 
-#color7{
-    background-color : #008f11;
+#color7 {
+    background-color: #008f11;
     .space();
 }
+
 ///////////////
 
-.space(){
-    width : @circle-size;
-    height :  @circle-size;
+.space() {
+    width: @circle-size;
+    height: @circle-size;
     border-radius: 50%;
     vertical-align: middle;
     margin-right: 8px;
 }
 
-#scroll{
-    position : absolute;
-    width : 100%;
-    bottom : 3%;
+#scroll {
+    position: absolute;
+    width: 100%;
+    bottom: 3%;
     text-align: center;
     font-size: 14px;
     opacity: 0;
     z-index: 1111;
-       .starter();
+    .starter();
 }
 
 #arrow {
@@ -190,27 +192,33 @@ html {
 /////////////////////////////////////////////////////////////////
 .starter() {
     .keyframes(fade-in;
+
         {
         0% {
             opacity: 0;
         }
+
         100% {
             opacity: 1;
         }
     }
+
     );
     .animation(fade-in @animationTime ease-in-out 0s forwards);
 }
 
 
 .keyframes(@name;
+
 @arguments) {
     @-moz-keyframes @name {
         @arguments();
     }
+
     @-webkit-keyframes @name {
         @arguments();
     }
+
     @keyframes @name {
         @arguments();
     }

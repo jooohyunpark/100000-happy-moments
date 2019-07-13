@@ -311,7 +311,7 @@ oReq.onload = function (e) {
         display: "none"
     }
 
-    let tooltip_template = document.createRange().createContextualFragment(`<div id="tooltip" style="display: none; position: absolute; pointer-events: none; font-size: 24px; width: 560px; line-height: 1.2;  color: white; font-family: sans-serif;">
+    let tooltip_template = document.createRange().createContextualFragment(`<div id="tooltip" style="display: none; position: absolute; pointer-events: none; font-size: 20px; width: 560px; line-height: 24px; color: white; font-family: sans-serif;">
   <div id="point_tip" style="padding: 10px;"></div>
 </div>`);
     document.body.append(tooltip_template);
@@ -322,7 +322,7 @@ oReq.onload = function (e) {
     //let $group_tip = document.querySelector('#group_tip');
 
     function updateTooltip() {
-        $tooltip.style.display = tooltip_state.display;                
+        $tooltip.style.display = tooltip_state.display;
         $tooltip.style.left = tooltip_state.left + 'px';
         $tooltip.style.top = tooltip_state.top + 'px';
         $point_tip.innerText = tooltip_state.name;
@@ -354,18 +354,16 @@ oReq.onload = function (e) {
         tooltip_state.name = datum.name;
         tooltip_state.group = datum.group;
         tooltip_state.colorValue = datum.colorValue;
-        tooltip_state.display = "block";        
+        tooltip_state.display = "block";
         //  tooltip_state.height = datum.group;    
         updateTooltip();
     }
 
     function hideTooltip() {
         tooltip_state.display = "none";
-        updateTooltip();
+        $tooltip.style.display = tooltip_state.display;        
+        //        updateTooltip();
     }
-
-
-
 
     ////////////////////////////////////////////////////////////////////////    
 
@@ -390,3 +388,6 @@ function trigger() {
         button.style.backgroundColor = 'black';
     }
 }
+
+
+
