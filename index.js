@@ -311,9 +311,10 @@ oReq.onload = function (e) {
         display: "none"
     }
 
-    let tooltip_template = document.createRange().createContextualFragment(`<div id="tooltip" style="display: none; position: absolute; pointer-events: none; font-size: 20px; width: 560px; line-height: 24px; color: white; font-family: sans-serif;">
+    let tooltip_template = document.createRange().createContextualFragment(`<div id="tooltip" style="display: none; position: absolute; pointer-events: none; font-size: 20px; line-height: 24px; color: white; font-family: sans-serif;">
   <div id="point_tip" style="padding: 10px;"></div>
 </div>`);
+
     document.body.append(tooltip_template);
 
 
@@ -322,16 +323,21 @@ oReq.onload = function (e) {
     //let $group_tip = document.querySelector('#group_tip');
 
     function updateTooltip() {
-        $tooltip.style.display = tooltip_state.display;
         $tooltip.style.left = tooltip_state.left + 'px';
         $tooltip.style.top = tooltip_state.top + 'px';
         $point_tip.innerText = tooltip_state.name;
         $point_tip.style.background = color_array[tooltip_state.colorValue];
+        $point_tip.style.width = tooltip_state.width + 'px';
+
+
+        setTimeout(function () {
+            $tooltip.style.display = tooltip_state.display;
+        }, 20);
         //  $group_tip.innerText = `Group ${tooltip_state.group}`;
     }
 
     function showTooltip(mouse_position, datum) {
-        let tooltip_width = 560;
+
         let x_offset;
         let y_offset;
 
@@ -349,6 +355,7 @@ oReq.onload = function (e) {
             y_offset = -20 - $point_tip.offsetHeight;
         }
 
+        tooltip_state.width = width * 2 / 5;
         tooltip_state.left = mouse_position[0] + x_offset;
         tooltip_state.top = mouse_position[1] + y_offset;
         tooltip_state.name = datum.name;
@@ -361,12 +368,11 @@ oReq.onload = function (e) {
 
     function hideTooltip() {
         tooltip_state.display = "none";
-        $tooltip.style.display = tooltip_state.display;        
+        $tooltip.style.display = tooltip_state.display;
         //        updateTooltip();
     }
 
     ////////////////////////////////////////////////////////////////////////    
-
 
 }
 
@@ -388,6 +394,3 @@ function trigger() {
         button.style.backgroundColor = 'black';
     }
 }
-
-
-
